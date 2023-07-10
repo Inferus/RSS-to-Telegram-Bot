@@ -399,7 +399,7 @@ class PostFormatter:
 
             # ---- via ----
             if via_type == FEED_TITLE_VIA_W_LINK:
-                via_text = Text([Text('Читайте '), Link(feed_title, param=self.link) if self.link else Text(feed_title)])
+                via_text = Text([Link("Читайте на LightPress", param=self.link) if self.link else Text(feed_title)])
             elif via_type == FEED_TITLE_VIA_NO_LINK:
                 via_text = Text(f'via {feed_title}')
             elif via_type == BARE_LINK_VIA and self.link:
